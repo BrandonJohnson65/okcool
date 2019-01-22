@@ -3,4 +3,7 @@ class QuotesController < ApplicationController
     @quote = Quote.all.sample
 
   end
+  def new
+    @quote = Quote.new
+  end
 end

@@ -12,6 +12,7 @@
   <body>
     <header class="row">
     <div class="col-3">
+      <%= link_to root_path, class: 'logo' do %>
     
         <div class="circle">
         <br />
@@ -21,12 +22,13 @@
         <br />
         Quotes
       </div>
+      <% end %>
     </div>
     <div class="col-4 slogan">
       Best Quotes Ever
     </div>
     <div class="col-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'Contribute', new_quote_path %>
       <%= link_to 'About', '#' %>
     </div>
 
@@ -41,7 +43,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-          <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+          <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
         </div>
           <div class="col-6">
             Proudly hacked by <a href="https://brandon1234.netlify.com">Brandon Johnson</a><br />
