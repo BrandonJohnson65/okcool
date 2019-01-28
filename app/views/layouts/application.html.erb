@@ -26,16 +26,17 @@
       </div>
       <% end %>
     </div>
-    <div class="col-4 slogan">
+    <div class="col col-sm-4 hidden-xs-down slogan">
      Climate Action Source:
       <br />
   Voice Your Ideas to Reverse Climate Change,
   <br />
   Browse Other's Ideas to Save the Environment
     </div>
-    <div class="col-5 links">
+    <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
       <!-- Button trigger modal -->
       <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+      &nbsp;&nbsp;
       <%= link_to 'About', about_path %>
     </div>
 
@@ -57,8 +58,10 @@
           </div> 
           <%= simple_form_for Quote.new do |f| %>
         <div class="modal-body">
-          <%= f.input :action %>
-          <%= f.input :activist %>
+          <%= f.input :action, label: "Share an action that people can do to help the environment:", placeholder: "Reduce water usage" %>
+          <br />
+          
+          <%= f.input :activist, label: "Who is contributing the idea?:", placeholder: "W.E. Saves" %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -82,11 +85,11 @@
   <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
           <%= link_to "Show me another way that I can make an impact.", root_path, class: 'next-quote' %>
         </div>
-          <div class="col-6">
-            Proudly hacked by <a href="https://brandon1234.netlify.com">Brandon Johnson</a><br />
+          <div class="col-12 col-sm-6 footer-blurb">
+            Proudly created by <a href="https://brandon1234.netlify.com">Brandon Johnson</a><br />
             Want to build your own Splurty Web App - <a href="https://online.bootcampspot.com">Learn how to code here</a>
           </div>
 
